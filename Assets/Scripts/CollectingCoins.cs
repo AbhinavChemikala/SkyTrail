@@ -18,6 +18,7 @@ public class CollectingCoins : MonoBehaviour
             coins = coins + 1;
             Col.gameObject.SetActive(false);
             Destroy(Col.gameObject);
+
         }
     }
     // Update is called once per frame

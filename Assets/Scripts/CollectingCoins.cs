@@ -1,29 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectingCoins : MonoBehaviour
 {
-    public int coins;
+    public GameObject coins;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
     public void OnTriggerEnter(Collider Col)
     {
-        if(Col.gameObject.tag == "Coin")
+        if (Col.gameObject.tag == "Coin")
         {
-            Debug.Log("Coin Collected!");
-            coins = coins + 1;
             Col.gameObject.SetActive(false);
-            
-
+            Invoke(nameof(ActiveCoin),5f);
+            //StartCoroutine(HideObject());
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    public void ActiveCoin()
+    {
+        Debug.Log("Active coin");
+
+        coins.SetActive(true);
+    }
+
+
+    IEnumerator HideObject()
     {
         
+        Debug.Log("Couritine started");
+        yield return new WaitForSeconds(2);
+        Debug.Log("2 secs");
+        coins.SetActive(true);
+
     }
 }

@@ -18,6 +18,7 @@ public class SpawnTile : MonoBehaviour
     {
         previousTilePosition = referenceObject.transform.position;
         startTime = Time.time;
+      
     }
 
     // Update is called once per frame
@@ -40,4 +41,5 @@ public class SpawnTile : MonoBehaviour
             previousTilePosition = spawnPos;
         }
     }
+
 }

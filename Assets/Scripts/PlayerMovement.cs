@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private bool turnLeft, turnRight;
     public float speed = 7.0f;
     private CharacterController myCharacterController;
+    public static int numberOfCoins;
 
     // Start is called before the first frame update
     void Start()
     {
         myCharacterController = GetComponent<CharacterController>();
+        numberOfCoins = 0;
     }
 
     // Update is called once per frame

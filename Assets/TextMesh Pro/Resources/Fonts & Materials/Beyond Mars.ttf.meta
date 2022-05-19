@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7af40cfae52a8fd41af1edc5c6b860e5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Beyond Mars
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13ebaa4e6e17db74ba5a85b79577c7f5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,6 +8,7 @@ TagManager:
   - Thief
   - Runner
   - Angel
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX

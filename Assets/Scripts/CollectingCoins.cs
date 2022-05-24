@@ -9,9 +9,7 @@ public class CollectingCoins : MonoBehaviour
     public GameObject coins;
     public AudioClip coinSound;
     public static int coin;
-    public Text coinDisplayText;
     
-
     // Start is called before the first frame update
     
     public void OnTriggerEnter(Collider Col)
@@ -26,6 +24,13 @@ public class CollectingCoins : MonoBehaviour
             Invoke(nameof(ActiveCoin),5f);
             //StartCoroutine(HideObject());
         }
+
+        if (Col.gameObject.tag == "DeathTrigger")
+        {
+            Debug.Log("Died");
+
+        }
+        
     }
 
     public void ActiveCoin()

@@ -2,11 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectingCoins : MonoBehaviour
 {
     public GameObject coins;
     public AudioClip coinSound;
+    public static int coin;
+    public Text coinDisplayText;
+    
 
     // Start is called before the first frame update
     
@@ -14,6 +18,9 @@ public class CollectingCoins : MonoBehaviour
     {
         if (Col.gameObject.tag == "Coin")
         {
+            coin++;
+            ScoreManager.instance.addCoin();
+            Debug.Log(coin);
             Col.gameObject.SetActive(false);
             AudioSource.PlayClipAtPoint(coinSound, transform.position,1.56f);
             Invoke(nameof(ActiveCoin),5f);

@@ -9,9 +9,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public Text coinsText;
     public Text totalCoinsText;
+    
+    public static int totalCoins = 0;
 
-    private int highscore = 0;
-
+    
     private void Awake()
     {
         instance = this;
@@ -19,15 +20,17 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("TotalCoins", 0);
+        totalCoins = PlayerPrefs.GetInt("totalCoins", 0);
         coinsText.text = "Coins: "+ CollectingCoins.coin.ToString();
-        totalCoinsText.text = "Total Coins: " + highscore;
+        totalCoinsText.text = "Total Coins: " + totalCoins.ToString();
     }
+    
 
     public void addCoin()
     {
+        totalCoins += 1;
         coinsText.text = "Coins: "+ CollectingCoins.coin.ToString();
-        PlayerPrefs.SetInt("TotalCoins", highscore);
-
+        totalCoinsText.text = "Total Coins: " + totalCoins.ToString();
+        PlayerPrefs.SetInt("totalCoins", totalCoins);
     }
 }

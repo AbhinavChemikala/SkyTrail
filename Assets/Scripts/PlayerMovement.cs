@@ -29,5 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
         myCharacterController.SimpleMove(new Vector3(0f, 0f, 0f));
         myCharacterController.Move(transform.forward * speed * Time.deltaTime);
+        
+        
+        
+       
     }
 }

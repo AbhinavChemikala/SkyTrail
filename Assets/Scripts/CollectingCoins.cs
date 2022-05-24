@@ -25,11 +25,11 @@ public class CollectingCoins : MonoBehaviour
             //StartCoroutine(HideObject());
         }
 
-        if (Col.gameObject.tag == "DeathTrigger")
-        {
-            Debug.Log("Died");
+        //if (Col.gameObject.tag == "DeathTrigger")
+        //{
+        //    Debug.Log("Died");
 
-        }
+        //}
         
     }
 
@@ -50,4 +50,6 @@ public class CollectingCoins : MonoBehaviour
         coins.SetActive(true);
 
     }
+
+    
 }

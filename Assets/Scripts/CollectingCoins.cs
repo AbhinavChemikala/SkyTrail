@@ -6,6 +6,7 @@ using UnityEngine;
 public class CollectingCoins : MonoBehaviour
 {
     public GameObject coins;
+    public AudioClip coinSound;
 
     // Start is called before the first frame update
     
@@ -14,6 +15,7 @@ public class CollectingCoins : MonoBehaviour
         if (Col.gameObject.tag == "Coin")
         {
             Col.gameObject.SetActive(false);
+            AudioSource.PlayClipAtPoint(coinSound, transform.position,1.56f);
             Invoke(nameof(ActiveCoin),5f);
             //StartCoroutine(HideObject());
         }

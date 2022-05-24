@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
+  - Thief
+  - Runner
+  - Angel
   layers:
   - Default
   - TransparentFX

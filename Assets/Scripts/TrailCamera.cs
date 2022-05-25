@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,34 @@ public class TrailCamera : MonoBehaviour
     public float trailDistance = 5.0f;
     public float heightOffset = 3.0f;
     public float cameraDelay = 0.02f;
+    [SerializeField] Transform thiefObj;
+    [SerializeField] Transform runnerObj;
+    [SerializeField] Transform luckyObj;
+    [SerializeField] Transform maincharObj;
+    
+    private void Start()
+    {
+        if (Shop.thiefChar)
+        {
+            target = thiefObj;
+        }
+        else if (Shop.runnerChar)
+        {
+            target = runnerObj;
 
-    // Update is called once per frame
+        }
+        else if (Shop.luckyChar)
+        {
+            target = luckyObj;
+
+        }
+        else
+        {
+            target = maincharObj;
+
+        }
+    }
+
     void Update()
     {
         Vector3 followPos = target.position - target.forward * trailDistance;

@@ -26,4 +26,9 @@ public class MainMenuScreen : MonoBehaviour
         SceneManager.LoadScene("Credits");
 
     }
+    public void ShopButton()
+    {
+        SceneManager.LoadScene("Shop");
+
+    }
 }

@@ -12,6 +12,7 @@ public class DeathTrigger : MonoBehaviour
             Debug.Log("Fallen");
             LevelMusic = GameObject.Find("LevelMusic");
             Destroy(LevelMusic);
+            Time.timeScale = 0;
         }
     }
 }

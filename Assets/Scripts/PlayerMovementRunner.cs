@@ -8,6 +8,7 @@ public class PlayerMovementRunner : MonoBehaviour
     private float speed;
     private CharacterController myCharacterController;
     public static int numberOfCoins;
+    public AudioClip runPower;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlayerMovementRunner : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             speed = 14.0f;
+            AudioSource.PlayClipAtPoint(runPower, transform.position, 1.56f);
         }
 
         turnLeft = Input.GetKeyDown(KeyCode.A);

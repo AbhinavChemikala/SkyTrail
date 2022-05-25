@@ -14,7 +14,6 @@ public class CollectingCoins : MonoBehaviour
     public void Start()
     {
         
-
     }
 
     public void OnTriggerEnter(Collider Col)

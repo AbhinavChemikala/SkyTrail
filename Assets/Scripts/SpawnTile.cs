@@ -78,9 +78,5 @@ public class SpawnTile : MonoBehaviour
             //Instantiate(obstacleToSpawn, spawnposObstacle, Quaternion.Euler(0, 0, 0));
             //previousObstaclePosition = spawnposObstacle;
         }
-  
-        
     }
-    
-
 }

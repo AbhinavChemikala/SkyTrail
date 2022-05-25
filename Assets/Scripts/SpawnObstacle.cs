@@ -31,7 +31,7 @@ public class SpawnObstacle : MonoBehaviour
 
     void spawnObstacle()
     {
-        float spawnDistance = 10;
+        float spawnDistance = 5;
         playerPos.y += 1;
         Vector3 spawnPos = playerPos + playerDirection*spawnDistance;
  

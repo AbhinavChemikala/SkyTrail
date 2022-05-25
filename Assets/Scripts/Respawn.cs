@@ -4,29 +4,17 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    public GameObject player;
-    private Vector3 playerPosition;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-         playerPosition = player.gameObject.transform.position;
-    }
-
-    // Update is called once per frame
+    [SerializeField]public Transform player;
+    [SerializeField]public Transform RespawnTrigger;
+    
     void Update()
     {
-        if (playerPosition.y >= 2.26f)
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            playerPosition = player.gameObject.transform.position;
-            Debug.Log(playerPosition);
+            player.transform.position = RespawnTrigger.transform.position;
+            Debug.Log("Respawn");
         }
     }
-
-    void Respawns()
-    {
-       
-    }
-
+    
     
 }

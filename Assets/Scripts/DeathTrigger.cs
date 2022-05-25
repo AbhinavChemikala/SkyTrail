@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathTrigger : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class DeathTrigger : MonoBehaviour
             Debug.Log("Fallen");
             LevelMusic = GameObject.Find("LevelMusic");
             Destroy(LevelMusic);
-            Time.timeScale = 0;
+            SceneManager.LoadScene("Game Over");
+            
         }
     }
 }

@@ -572,7 +572,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Level Designer, Basic Movement
 
-    Chemikala Abhinav'
+    Chemikala Abhinav Kumar Reddy'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a09de4acacd46042bcfc9793e0f6643, type: 2}
   m_sharedMaterial: {fileID: 1983544866675017723, guid: 7a09de4acacd46042bcfc9793e0f6643, type: 2}
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -108.26691, y: 0, z: -182.03912, w: 0}
+  m_margin: {x: -158.78772, y: 0, z: -182.03912, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1090,6 +1090,7 @@ GameObject:
   - component: {fileID: 1436556055}
   - component: {fileID: 1436556057}
   - component: {fileID: 1436556056}
+  - component: {fileID: 1436556058}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1155,6 +1156,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436556054}
   m_CullTransparentMesh: 1
+--- !u!114 &1436556058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436556054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46c285ac28d6ee4f86ecbd0efc7dd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1820106102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1386,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1946636457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1436556058}
+        m_TargetAssemblyTypeName: CreditsScreen, Assembly-CSharp
+        m_MethodName: MainMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1946636457
 MonoBehaviour:
   m_ObjectHideFlags: 0

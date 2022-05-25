@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
 public class SpawnObstacle : MonoBehaviour
 {
     private GameObject player;

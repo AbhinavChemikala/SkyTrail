@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &442072 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6d2b53b2ba7b0074390cd1fe25031720, type: 3}
-  m_PrefabInstance: {fileID: 893684242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &37432521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,13 +1533,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620162427}
-  m_LocalRotation: {x: 0.7062308, y: -0, z: -0, w: 0.70798177}
-  m_LocalPosition: {x: -0.215, y: 0.383, z: 0.66499996}
-  m_LocalScale: {x: 1.3276751, y: 1.3276751, z: 1.3276751}
+  m_LocalRotation: {x: 0.15005788, y: -0.69181573, z: 0.6901048, w: 0.15042992}
+  m_LocalPosition: {x: 0.017243713, y: -0.229, z: 0.018511003}
+  m_LocalScale: {x: 2.313473, y: 2.3134735, z: 2.313474}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 442072}
-  m_RootOrder: 1
+  m_Father: {fileID: 893684258}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 89.862, y: 0, z: 0}
 --- !u!114 &620162429
 MonoBehaviour:
@@ -1577,9 +1572,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 0.9246411, g: 1, b: 0.2216981, a: 1}
+  m_Intensity: 279.66
+  m_Range: 6.58
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2175,7 +2170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4001242031928727236, guid: 6d2b53b2ba7b0074390cd1fe25031720, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.649
+      value: 0.612
       objectReference: {fileID: 0}
     - target: {fileID: -4001242031928727236, guid: 6d2b53b2ba7b0074390cd1fe25031720, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2289,6 +2284,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.900977, y: 0.400653, z: 1.900977}
   m_Center: {x: -0.00000011920929, y: 0.058214493, z: 0}
+--- !u!4 &893684258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4001242031928727236, guid: 6d2b53b2ba7b0074390cd1fe25031720, type: 3}
+  m_PrefabInstance: {fileID: 893684242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &917571713
 PrefabInstance:
   m_ObjectHideFlags: 0

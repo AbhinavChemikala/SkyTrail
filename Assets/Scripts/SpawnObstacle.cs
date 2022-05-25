@@ -7,13 +7,18 @@ using Random = UnityEngine.Random;
 
 public class SpawnObstacle : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject bladePrefabs;
     private Vector3 spawnObstaclePosition;
     private Vector3 playerPos;
     private Vector3 playerDirection;
     private Quaternion playerRotation;
     float timer=0;
+
+    private void Start()
+    {
+        player = this.gameObject;
+    }
 
     private void Update()
     {

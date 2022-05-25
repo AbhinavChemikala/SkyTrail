@@ -33,4 +33,5 @@ public class ScoreManager : MonoBehaviour
         totalCoinsText.text = "Total Coins: " + totalCoins.ToString();
         PlayerPrefs.SetInt("totalCoins", totalCoins);
     }
+
 }

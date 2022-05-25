@@ -10,7 +10,7 @@ public class NewDoubleCoins : MonoBehaviour
     private Text scoreText;
     private int scoreValue;
     private bool doubleCoins = false;
-    public AudioClip doubleCoinPower;
+    public AudioSource doubleCoinPower;
     //private int doubleScore;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class NewDoubleCoins : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             doubleCoins = true;
-            AudioSource.PlayClipAtPoint(doubleCoinPower, transform.position, 1.56f);
+            doubleCoinPower.Play();
         }
     }
 

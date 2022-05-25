@@ -24,6 +24,7 @@ public class NewDoubleCoins : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             doubleCoins = true;
+    
         }
     }
 
@@ -41,4 +42,5 @@ public class NewDoubleCoins : MonoBehaviour
         yield return new WaitForSeconds(15);
         doubleCoins = false;
     }
+
 }

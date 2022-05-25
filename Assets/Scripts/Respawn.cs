@@ -6,6 +6,7 @@ public class Respawn : MonoBehaviour
 {
     public GameObject player;
     private Vector3 playerPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class Respawn : MonoBehaviour
 
     void Respawns()
     {
-
+       
     }
+
+    
 }

@@ -1,44 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnObstacle : MonoBehaviour
 {
-    public GameObject tileToSpawn;
-    public GameObject referenceObject;
-    public float timeOffset = 0.4f;
-    public float distanceBetweenTiles = 5.0F;
-    public float randomValue = 0.8f;
-    private Vector3 previousTilePosition;
-    private float startTime;
-    private Vector3 direction, mainDirection = new Vector3(0, 0, 1), otherDirection = new Vector3(1, 0, 0);
+    public GameObject player;
+    public GameObject[] bladePrefabs;
+    private Vector3 spawnObstaclePosition;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        previousTilePosition = referenceObject.transform.position;
-        previousTilePosition.y += 0.5f;
-        startTime = Time.time;
+        float distanceTohorizon = Vector3.Distance(player.gameObject.transform.position, spawnObstaclePosition);
+        //spawnObstacle();
+        Invoke("spawnObstacle",3f);
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    void spawnObstacle()
     {
-        if (Time.time - startTime > timeOffset)
-        {
-            if (Random.value < randomValue)
-                direction = mainDirection;
-            else
-            {
-                Vector3 temp = direction;
-                direction = otherDirection;
-                mainDirection = direction;
-                otherDirection = temp;
-            }
-            Vector3 spawnPos = previousTilePosition + distanceBetweenTiles * direction;
-            startTime = Time.time;
-            Instantiate(tileToSpawn, spawnPos, Quaternion.Euler(0, 0, 0));
-            previousTilePosition = spawnPos;
-        }
+        spawnObstaclePosition = player.gameObject.transform.position;
+        spawnObstaclePosition.z += 4;
+        spawnObstaclePosition.y += 1;
+        Instantiate(bladePrefabs[(Random.Range(0, bladePrefabs.Length))], spawnObstaclePosition, quaternion.identity);
+        CancelInvoke(); 
     }
 }

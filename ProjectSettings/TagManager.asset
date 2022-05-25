@@ -9,6 +9,7 @@ TagManager:
   - Runner
   - Angel
   - DeathTrigger
+  - Blade
   layers:
   - Default
   - TransparentFX

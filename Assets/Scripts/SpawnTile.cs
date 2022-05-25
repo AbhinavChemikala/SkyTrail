@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class SpawnTile : MonoBehaviour
 {
@@ -62,6 +64,8 @@ public class SpawnTile : MonoBehaviour
             }
             Vector3 spawnPos = previousTilePosition + distanceBetweenTiles * direction;
             Vector3 spawnposCoin = previousCoinPosition + distanceBetweenCoin * direction;
+            
+
             //previousObstaclePosition.x = Random.Range(1, 10);
             //Vector3 spawnposObstacle = previousCoinPosition + distanceBetweenObstacle * direction;
             //spawnposObstacle.x += Random.Range(1, 10);

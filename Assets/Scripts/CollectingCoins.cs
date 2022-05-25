@@ -26,17 +26,15 @@ public class CollectingCoins : MonoBehaviour
             Col.gameObject.SetActive(false);
             AudioSource.PlayClipAtPoint(coinSound, transform.position,1.56f);
             Invoke(nameof(ActiveCoin),5f);
-            
             //StartCoroutine(HideObject());
         }
 
-        //if (Col.gameObject.tag == "DeathTrigger")
-        //{
-        //    Debug.Log("Died");
-
-        //}
         
     }
+    
+        
+        
+    
 
     public void ActiveCoin()
     {
@@ -46,15 +44,7 @@ public class CollectingCoins : MonoBehaviour
     }
 
 
-    IEnumerator HideObject()
-    {
-        
-        Debug.Log("Couritine started");
-        yield return new WaitForSeconds(2);
-        Debug.Log("2 secs");
-        coins.SetActive(true);
-
-    }
+ 
 
     
 }

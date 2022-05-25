@@ -8,23 +8,38 @@ using Random = UnityEngine.Random;
 public class SpawnObstacle : MonoBehaviour
 {
     public GameObject player;
-    public GameObject[] bladePrefabs;
+    public GameObject bladePrefabs;
     private Vector3 spawnObstaclePosition;
+    private Vector3 playerPos;
+    private Vector3 playerDirection;
+    private Quaternion playerRotation;
+    float timer=0;
 
     private void Update()
     {
-        float distanceTohorizon = Vector3.Distance(player.gameObject.transform.position, spawnObstaclePosition);
-        //spawnObstacle();
-        Invoke("spawnObstacle",3f);
+        playerPos = player.transform.position;
+        playerDirection = player.transform.forward;
+        playerRotation = player.transform.rotation;
+        timer += Time.deltaTime;
+
+        if(timer>3f){
+            spawnObstacle();
+            timer = 0;
+        }    
         
     }
 
     void spawnObstacle()
     {
-        spawnObstaclePosition = player.gameObject.transform.position;
-        spawnObstaclePosition.z += 4;
-        spawnObstaclePosition.y += 1;
-        Instantiate(bladePrefabs[(Random.Range(0, bladePrefabs.Length))], spawnObstaclePosition, quaternion.identity);
-        CancelInvoke(); 
+        float spawnDistance = 10;
+        playerPos.y += 1;
+        Vector3 spawnPos = playerPos + playerDirection*spawnDistance;
+ 
+        Instantiate(bladePrefabs, spawnPos, playerRotation );
+        
     }
+    
+ 
+
+    
 }

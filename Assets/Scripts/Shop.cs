@@ -36,13 +36,7 @@ public class Shop : MonoBehaviour
         ScoreManager.totalCoins = PlayerPrefs.GetInt("totalCoins", 0);
         ShopCoins = ScoreManager.totalCoins;
         totalCoinsText.text = " Coins: " + ShopCoins.ToString();
-        thiefBought = (PlayerPrefs.GetInt("thiefBought") != 0);
-        runnerBought = (PlayerPrefs.GetInt("RunnerBought") != 0);
-        luckyBought = (PlayerPrefs.GetInt("luckyBought") != 0);
-        thiefChar = (PlayerPrefs.GetInt("thiefChar") != 0);
-        runnerChar = (PlayerPrefs.GetInt("runnerChar") != 0);
-        luckyChar = (PlayerPrefs.GetInt("luckyChar") != 0);
-
+        
     }
 
     public void ThiefButton()

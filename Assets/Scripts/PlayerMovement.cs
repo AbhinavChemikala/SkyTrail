@@ -10,9 +10,9 @@ using UnityEngine.UIElements;
 public class PlayerMovement : MonoBehaviour
 {
     private bool turnLeft, turnRight;
-    public Text distancemoved;
+    //public Text distancemoved;
     public float speed = 7.0f;
-    float distanceunit = 0;
+    //float distanceunit = 0;
     private CharacterController myCharacterController;
     public static int numberOfCoins;
 
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myCharacterController = GetComponent<CharacterController>();
         numberOfCoins = 0;
-        InvokeRepeating("distance",0,1 / speed);
+        //InvokeRepeating("distance",0,1 / speed);
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     void distance()
     { 
-        distanceunit = distanceunit + 1;
-        distancemoved.text = distanceunit.ToString();
+        //distanceunit = distanceunit + 1;
+        //distancemoved.text = distanceunit.ToString();
     }
 }

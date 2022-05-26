@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public Text coinsText;
-    public Text totalCoinsText;
+    public TextMeshProUGUI coinsText;
+    public TextMeshProUGUI totalCoinsText;
     
     public static int totalCoins = 0;
 

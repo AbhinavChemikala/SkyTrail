@@ -12,12 +12,6 @@ public class CharacterSwitch : MonoBehaviour
 
     void Start()
     {
-        Shop.thiefBought = (PlayerPrefs.GetInt("thiefBought") != 0);
-        Shop.runnerBought = (PlayerPrefs.GetInt("RunnerBought") != 0);
-        Shop.luckyBought = (PlayerPrefs.GetInt("luckyBought") != 0);
-        Shop.thiefChar = (PlayerPrefs.GetInt("thiefChar") != 0);
-        Shop.runnerChar = (PlayerPrefs.GetInt("runnerChar") != 0);
-        Shop.luckyChar = (PlayerPrefs.GetInt("luckyChar") != 0);
         
         if (Shop.thiefChar)
         {

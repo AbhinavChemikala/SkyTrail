@@ -16,9 +16,7 @@ public class TrailCamera : MonoBehaviour
     
     private void Start()
     {
-        Shop.thiefChar = (PlayerPrefs.GetInt("thiefChar") != 0);
-        Shop.runnerChar = (PlayerPrefs.GetInt("runnerChar") != 0);
-        Shop.luckyChar = (PlayerPrefs.GetInt("luckyChar") != 0);
+        
         if (Shop.thiefChar)
         {
             target = thiefObj;

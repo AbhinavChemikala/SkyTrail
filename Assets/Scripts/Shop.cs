@@ -31,6 +31,10 @@ public class Shop : MonoBehaviour
     public static bool runnerBought = false;
     public static bool luckyBought = false;
 
+    public static bool thiefUI = false;
+    public static bool runnerUI = false;
+    public static bool luckyUI = false;
+
     void Start()
     {
         ScoreManager.totalCoins = PlayerPrefs.GetInt("totalCoins", 0);
@@ -49,7 +53,7 @@ public class Shop : MonoBehaviour
             thiefBought = true;
             thiefBoughtText.text = "Bought";
             PlayerPrefs.SetInt("thiefBought",(thiefBought ? 1 : 0));
-
+            thiefUI = true;
             Debug.Log("Buy");
         }
     }
@@ -63,6 +67,7 @@ public class Shop : MonoBehaviour
             runnerBought = true;
             runnerBoughtText.text = "Bought";
             PlayerPrefs.SetInt("RunnerBought",(runnerBought ? 1 : 0));
+            runnerUI = true;
 
             Debug.Log("Buy");
 
@@ -78,6 +83,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("luckyBought",(luckyBought ? 1 : 0));
 
             luckyBought = true;
+            luckyUI = true;
             Debug.Log("Buy");
             luckyBoughtText.text = "Bought";
         }

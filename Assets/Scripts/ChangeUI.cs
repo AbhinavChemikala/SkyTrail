@@ -8,15 +8,26 @@ public class ChangeUI : MonoBehaviour
     public GameObject PlayerUI;
     public GameObject AngelUI;
     public GameObject RunnerUI;
-
-    public GameObject[] Players;
     
-
     // Start is called before the first frame update
     void Start()
     {
-
-        //GameObject.activeInHierarchy;
+        if (Shop.thiefUI)
+        {
+            ThiefUI.SetActive(true);
+        }
+        else if (Shop.luckyUI)
+        {
+            AngelUI.SetActive(true);
+        }
+        else if (Shop.runnerUI)
+        {
+            RunnerUI.SetActive(true);
+        }
+        else
+        {
+            PlayerUI.SetActive(true);
+        }
     }
 
     // Update is called once per frame

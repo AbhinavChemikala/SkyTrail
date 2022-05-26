@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 public class ScoreScript : MonoBehaviour
 {
-    public Transform player;
     public TextMeshProUGUI scoreText;
     private float score;
     public TextMeshProUGUI highScoreText;

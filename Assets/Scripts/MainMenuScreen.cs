@@ -10,6 +10,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScreen : MonoBehaviour
 {
+    public AudioSource Bgm;
+    private void Start()
+    {
+        Bgm.Play();
+    }
+
     public void PlayButton()
     {
         SceneManager.LoadScene("SkyTrails");

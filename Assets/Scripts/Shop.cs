@@ -11,6 +11,10 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI thiefBoughtText;
     public TextMeshProUGUI runnerBoughtText;
     public TextMeshProUGUI luckyBoughtText;
+    
+    public TextMeshProUGUI thiefEquipText;
+    public TextMeshProUGUI runnerEquipText;
+    public TextMeshProUGUI luckyEquipText;
 
 
 
@@ -32,6 +36,12 @@ public class Shop : MonoBehaviour
         ScoreManager.totalCoins = PlayerPrefs.GetInt("totalCoins", 0);
         ShopCoins = ScoreManager.totalCoins;
         totalCoinsText.text = " Coins: " + ShopCoins.ToString();
+        thiefBought = (PlayerPrefs.GetInt("thiefBought") != 0);
+        runnerBought = (PlayerPrefs.GetInt("RunnerBought") != 0);
+        luckyBought = (PlayerPrefs.GetInt("luckyBought") != 0);
+        thiefChar = (PlayerPrefs.GetInt("thiefChar") != 0);
+        runnerChar = (PlayerPrefs.GetInt("runnerChar") != 0);
+        luckyChar = (PlayerPrefs.GetInt("luckyChar") != 0);
 
     }
 
@@ -42,9 +52,10 @@ public class Shop : MonoBehaviour
             ShopCoins -= thief;
             totalCoinsText.text = " Coins: " + ShopCoins.ToString();
             PlayerPrefs.SetInt("totalCoins", ShopCoins);
-            thiefChar = true;
             thiefBought = true;
             thiefBoughtText.text = "Bought";
+            PlayerPrefs.SetInt("thiefBought",(thiefBought ? 1 : 0));
+
             Debug.Log("Buy");
         }
     }
@@ -55,10 +66,9 @@ public class Shop : MonoBehaviour
             ShopCoins -= runner;
             totalCoinsText.text = " Coins: " + ShopCoins.ToString();
             PlayerPrefs.SetInt("totalCoins", ShopCoins);
-            runnerChar = true;
             runnerBought = true;
             runnerBoughtText.text = "Bought";
-
+            PlayerPrefs.SetInt("RunnerBought",(runnerBought ? 1 : 0));
 
             Debug.Log("Buy");
 
@@ -71,7 +81,8 @@ public class Shop : MonoBehaviour
             ShopCoins -= lucky;
             totalCoinsText.text = " Coins: " + ShopCoins.ToString();
             PlayerPrefs.SetInt("totalCoins", ShopCoins);
-            luckyChar = true;
+            PlayerPrefs.SetInt("luckyBought",(luckyBought ? 1 : 0));
+
             luckyBought = true;
             Debug.Log("Buy");
             luckyBoughtText.text = "Bought";
@@ -88,5 +99,35 @@ public class Shop : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
 
     }
-    
+
+    public void ThiefEquipbutton()
+    {
+        if (thiefBought)
+        {
+            thiefChar = true;
+            thiefEquipText.text = "Equipped";
+            PlayerPrefs.SetInt("thiefChar",(thiefChar ? 1 : 0));
+        }
+        
+    }
+    public void RunnerEquipbutton()
+    {
+        if (runnerBought)
+        {
+            runnerChar = true;
+            runnerEquipText.text = "Equipped";
+            PlayerPrefs.SetInt("runnerChar",(runnerChar ? 1 : 0));
+
+        }
+    }
+    public void AngelEquipbutton()
+    {
+        if (luckyBought)
+        {
+            luckyChar = true;
+            luckyEquipText.text = "Equipped";
+            PlayerPrefs.SetInt("luckyChar",(luckyChar ? 1 : 0));
+
+        }
+    }
 }

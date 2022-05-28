@@ -16,7 +16,7 @@ public class Rotation : MonoBehaviour
         if (gameObject.tag == "Blade" )
         {
             transform.Rotate(0, 1, 0, Space.World);
-            
+
         }
     }
 }

@@ -16,9 +16,6 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI runnerEquipText;
     public TextMeshProUGUI luckyEquipText;
 
-
-
-
     private int thief = 1000;
     private int runner = 2500;
     private int lucky = 5000;

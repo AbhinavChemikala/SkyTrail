@@ -26,16 +26,11 @@ public class CollectingCoins : MonoBehaviour
             Col.gameObject.SetActive(false);
             AudioSource.PlayClipAtPoint(coinSound, transform.position,1.56f);
             Invoke(nameof(ActiveCoin),5f);
-            //StartCoroutine(HideObject());
         }
 
         
     }
     
-        
-        
-    
-
     public void ActiveCoin()
     {
         Debug.Log("Active coin");
